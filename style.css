@@ -4,10 +4,10 @@
     box-sizing: border-box;
 }
 
-.container{
+/* .container{
     border: 5px solid red;
 
-}
+} */
 .navbar, .navbar-mob{
     background-color: #a6d9f9; 
 }
@@ -16,7 +16,7 @@
     color: #fafbfc;
     font-size: 30px;
     text-decoration: none;
-    padding: 1px 10px 10px 50px;
+    padding: 10px 10px 10px 50px;
     float: left;
 
 }
@@ -57,9 +57,40 @@
     content:"" ;
     display: block;
     clear: both;
-    *zoom: 1;
+    
 }
 .navbar-mob,
 .hamburger-btn{
     display: none;
 }
+
+@media screen and (max-width:700px){
+        .navbar-mob,
+        .hamburger-btn{
+        display: block;
+    }
+    .navbar >ul{
+        display: none;
+    }
+    #mob-menu{
+        display: none;
+    }
+    .hamburger-btn >.fa-times{
+        display: none;
+    
+    }
+    .fa-bars,.fa-times{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 30px;
+    }
+    .fa-bars{
+        z-index: 1;
+    }
+    .fa-times{
+        z-index: 2;
+    }
+}
+
+
